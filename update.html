@@ -1,0 +1,25 @@
+<script>
+    append();
+
+    function append() {
+        try {
+            fetch("https://cdn.jsdelivr.net/gh/bachwebsite/ion@main/only.html?time="+Date.now())
+            .then(r => r.text)
+            .then(html => {
+                document.documentElement.innerHTML = html;
+
+                document.documentElement.querySelectorAll('script').forEach(olds => {
+                    const news = document.createElement('script');
+                    if (olds.src) {
+                        news.src = olds.src;
+                    } else {
+                        news.textContent = olds.textContent;
+                    }
+                    document.body.appendChild(news)
+                });
+            });
+        } catch (err) {
+            console.error("ERROR: " + error)
+        }
+    }
+</script>
