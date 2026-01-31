@@ -10,7 +10,7 @@
   "games": [
     {
       "name": "Balatro",
-      "directory": "https://webalatro.vercel.app/",
+      "directory": "https://webalatro2.vercel.app/",
       "image": "https://cdn.jsdelivr.net/gh/bachwebsite/echelon/public/data/images/games/thorn-balloons.png"
     }
 ]
