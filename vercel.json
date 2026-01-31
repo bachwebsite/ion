@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/proxy/:path*",
+      "destination": "https://:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/proxy/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
+}
